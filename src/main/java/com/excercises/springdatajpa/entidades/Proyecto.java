@@ -13,4 +13,17 @@ public class Proyecto {
     private String desc_proy;
     private String titulo_proy;
     private int est_proy;
+
+    @Data
+    @Entity
+    @Table(name = "tb_proy_user_tar")
+    public static class Proy_User {
+            @Id
+            @GeneratedValue(strategy = GenerationType.IDENTITY)
+            private Long id_put;
+            private Long id_user;
+            private Long id_proy;
+            private Long id_tar;
+            private String descripcion;
+    }
 }
